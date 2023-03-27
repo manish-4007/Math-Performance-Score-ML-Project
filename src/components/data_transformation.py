@@ -12,7 +12,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join('\\artifacts',"preprocessor.pkl")
+    preprocessor_obj_file_path =  os.path.join('artifacts', "preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):
@@ -95,10 +95,7 @@ class DataTransformation:
 
             logging.info('Saved Preprocessing Object')
 
-            save_object(
-                file_path = self.data_transformation_config.preprocessor_obj_file_path,
-                obj = preprocessor_obj
-            )
+            save_object(self.data_transformation_config.preprocessor_obj_file_path,preprocessor_obj)
 
             return(
                 train_arr,
