@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Welcome to HomePage</h1>
-    <button style="height: 50px; width: 100px;"><a href="templates/home.html">Predict</a></button>
+    <form  action="{{ url_for('predict_datapoint')}}" method="post">
+    <button style="height: 50px; width: 100px;" >Predict</button></form>
 </body>
 </html>
