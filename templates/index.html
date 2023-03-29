@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Welcome to HomePage</h1>
+    <p>Predict the Maths Score</p>
     <form  action="{{ url_for('predict_datapoint')}}" method="post">
-    <button style="height: 50px; width: 100px;" >Predict</button></form>
+        <input class="btn btn-primary" style="height: 50px; width: 200px; margin-top: 20px;" type="submit" value="Predict your Maths Score" required />
 </body>
 </html>
