@@ -9,6 +9,7 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
+            #must change '/' to '/' while running in vscode
             model_path = 'artifacts/model.pkl'
             preprocessor_path = 'artifacts/preprocessor.pkl'
             model = load_object(model_path)
@@ -25,13 +26,13 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(  self,
-        gender: str,
-        race_ethnicity: str,
-        parental_level_of_education,
-        lunch: str,
-        test_preparation_course: str,
-        reading_score: int,
-        writing_score: int):
+        gender= "Male",
+        race_ethnicity= "Group A",
+        parental_level_of_education= "associate's degree",
+        lunch= "standard",
+        test_preparation_course= "Completed",
+        reading_score= 88.0,
+        writing_score= 79.0):
 
         self.gender = gender
 
